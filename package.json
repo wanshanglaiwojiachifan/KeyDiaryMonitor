@@ -1,0 +1,38 @@
+{
+  "name": "KeyDiaryMonitor",
+  "description": "关键字日记后台",
+  "version": "0.0.1",
+  "keywords": ["monitor", "admin", "diary", "keyword"],
+  "author": "RockDai <rockdai@qq.com>",
+  "scripts": {
+    "test": "make test",
+    "blanket": {
+      "pattern": "//^((?!(node_modules|test)).)*$/",
+      "data-cover-flags": {
+        "debug": false
+      }
+    }
+  },
+  "dependencies": {
+    "connect": "2.12.0",
+    "connect-render": "0.3.2",
+    "eventproxy": "0.2.6",
+    "response-send": "0.0.1",
+    "response-patch": "0.1.1",
+    "urlrouter": "0.5.3",
+    "moment": "2.4.0",
+    "utility": "0.1.9",
+    "ms": "0.6.2",
+    "mysql": "2.0.0-rc2"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "supertest": "*",
+    "mm": "*",
+    "pedding": "*",
+    "blanket": "*"
+  },
+  "main": "dispatch.js",
+  "engines": { "node": ">= 0.8.0" }
+}

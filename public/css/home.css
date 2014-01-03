@@ -1,0 +1,39 @@
+body {
+  font-family: "Balthazar";
+}
+.overview {
+  font-size: 24px;
+  line-height: 0;
+  color: #666666;
+  margin-top: 20px;
+}
+.overview .num {
+  display: inline-block;
+  font-size: 102px;
+  font-weight: bold;
+  line-height: 102px;
+  color: #45d4da;
+}
+#daily-diaries-chart {
+  width: 100%;
+  height: 480px;
+}
+.row {
+  display: -webkit-box;
+}
+.regulars-users {
+  display: -webkit-box;
+  width: 480px;
+}
+.diaries-sources {
+  display: -webkit-box;
+  width: 480px;
+}
+#diaries-sources-chart {
+  width: 480px;
+  height: 480px;
+}
+#regulars-users-chart {
+  width: 480px;
+  height: 480px;
+}

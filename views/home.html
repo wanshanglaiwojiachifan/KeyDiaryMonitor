@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>KeyDiary Monitor</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <link href="/public/css/base.css" rel="stylesheet" type="text/css">
+    <link href="/public/css/home.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="overview">
+      咱们 KeyDiary 自 2013 年 3 月 10 日以来，已上线 <span class="online-day-count">0</span> 天。<br />
+      到目前共有
+      <div class="num users-count"><%- usersCount %></div> 位用户，
+      他们写下了
+      <div class="num diaries-count"><%- diariesCount %></div> 条日记。
+    </div>
+    <div class="daily-diaries">
+      <div id="daily-diaries-chart"></div>      
+    </div>
+    <div class="row">
+      <div class="diaries-sources">
+        <div id="diaries-sources-chart"></div>
+      </div>
+      <div class="regulars-users">
+        <div id="regulars-users-chart"></div>
+      </div>
+    </div>
+
+    <script src="http://cdn.staticfile.org/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/webfont/1.3.0/webfont.min.js"></script>
+    <script src="http://cdn.staticfile.org/highcharts/3.0.2/highcharts.js"></script>
+    <script>
+      var DAILY_DIARIES = <%- JSON.stringify(dailyDiaries) %>;
+      var DAILY_USERS = <%- JSON.stringify(dailyUsers) %>;
+      var DAILY_USERS_ACT = <%- JSON.stringify(dailyUsersActive) %>;
+      var DIARIES_SOURCES = <%- JSON.stringify(diariesSources) %>;
+      var USER_DIARY_SEG = <%- JSON.stringify(diaryUserSeg) %>;
+      WebFont.load({
+        google: {
+          families: ['Balthazar']
+        }
+      });
+    </script>
+    <script src="/public/js/home.js?v=<%- locals.version %>"></script>
+  </body>
+</html>
